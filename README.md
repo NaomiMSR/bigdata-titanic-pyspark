@@ -29,3 +29,32 @@ Apply advanced data cleaning and feature engineering:
 4. Outliers: IQR-based detection on Fare and Age
 5. Feature engineering: FamilySize, IsAlone, Title
 6. Encoding: Index categorical columns for MLlib
+
+### Stage 3 – LOAD
+Persist the cleaned data in Parquet format — the industry standard for Spark because it is columnar, compressed, and schema-preserving.
+
+### Stage 4 – EXPLORATORY DATA ANALYSIS (EDA)
+Perform descriptive statistics, correlations, groupings, and frequency analysis using Spark DataFrames and Spark SQL.
+
+### Stage 5 – PREDICTIVE MODEL (MLlib)
+Algorithm Choice: Random Forest Classifier
+
+Justification:
+- Binary classification task (Survived = 0 or 1)
+- Mix of numeric and categorical features
+- Random Forest is robust to outliers, handles non-linearity, provides feature importances, and is resistant to overfitting through        ensemble averaging
+- Naturally works with the MLlib Pipeline API
+  
+Pipeline stages:
+1. StringIndexer → encode Sex, Embarked, AgeGroup, FareGroup
+2. VectorAssembler → combine all features into a single vector
+3. RandomForestClassifier → train the model
+
+### Stage 6 – VISUALIZATIONS
+Matplotlib, Seaborn, and Plotly charts covering:
+- Survival distribution
+- Survival by key features
+- Correlation heatmap
+- Feature importances
+- Model performance (ROC curve)
+
