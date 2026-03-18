@@ -83,3 +83,6 @@ PySpark · MLlib · Parquet · Spark SQL · Seaborn · Plotly · Matplotlib
 | EDA | Descriptive stats, correlations, groupings, Spark SQL queries |
 | Model | Random Forest via MLlib Pipeline API |
 | Visualizations | Seaborn, Matplotlib, Plotly — 6 charts including ROC curve |
+
+## Ver el notebook
+https://colab.research.google.com/drive/109YO4y0NbcGoK4yuOOf2FKpTqlU4i_sy?usp=sharing
