@@ -58,3 +58,28 @@ Matplotlib, Seaborn, and Plotly charts covering:
 - Feature importances
 - Model performance (ROC curve)
 
+## Results
+| Metric    | Value  |
+|-----------|--------|
+| AUC-ROC   | 0.9031 |
+| Accuracy  | 82.8%  |
+| F1-Score  | 0.826  |
+| Algorithm | Random Forest (100 trees) |
+
+## Stack
+PySpark · MLlib · Parquet · Spark SQL · Seaborn · Plotly · Matplotlib
+
+## How to run
+1. Open `BigData_Titanic_Project.ipynb` in Google Colab
+2. Run all cells top to bottom
+3. Dataset downloads automatically — no manual download needed
+
+## Pipeline
+| Stage | Description |
+|-------|-------------|
+| Extract | Load CSV into Spark with explicit schema |
+| Transform | Null imputation, dedup, IQR outlier capping, feature engineering |
+| Load | Persist clean data as Parquet, register Spark SQL view |
+| EDA | Descriptive stats, correlations, groupings, Spark SQL queries |
+| Model | Random Forest via MLlib Pipeline API |
+| Visualizations | Seaborn, Matplotlib, Plotly — 6 charts including ROC curve |
